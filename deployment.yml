@@ -1,17 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-  creationTimestamp: 2019-03-21T09:39:14Z
-  generation: 1
   labels:
     run: kubernetes-pmeu
   name: kubernetes-pmeu
   namespace: default
-  resourceVersion: "2477"
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/kubernetes-pmeu
-  uid: 30ab882c-4bbd-11e9-b69e-42010a840266
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -45,22 +38,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 1
-  conditions:
-  - lastTransitionTime: 2019-03-21T09:39:48Z
-    lastUpdateTime: 2019-03-21T09:39:48Z
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  - lastTransitionTime: 2019-03-21T09:39:14Z
-    lastUpdateTime: 2019-03-21T09:39:48Z
-    message: ReplicaSet "kubernetes-pmeu-5664b9bb8c" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  observedGeneration: 1
-  readyReplicas: 1
-  replicas: 1
-  updatedReplicas: 1
